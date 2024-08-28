@@ -4,7 +4,9 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
+import com.diworksdev.ecsite.dao.UserCreateCompleteDAO;
 import com.opensymphony.xwork2.ActionSupport;
+
 
 public class UserCreateCompleteAction extends ActionSupport implements SessionAware {
 	private String loginUserId;
