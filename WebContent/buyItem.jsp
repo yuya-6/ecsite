@@ -7,7 +7,7 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta http-equiv="Content-Style-Type" content="text/css"/>
 	<meta http-equiv="Content-Script-Type" content="text/javascript"/>
-	<meta http-equiv=" imagetoolbar" content="no"/>
+	<meta http-equiv="imagetoolbar" content="no"/>
 	<meta name="description" content=""/>
 	<meta name="keywords" content=""/>
 	<title>BuyItem画面</title>
@@ -77,6 +77,8 @@
 					<tr>
 						<td>
 							<span>値段 </span>
+						</td>
+						<td>
 							<s:property value="session.buyItem_price" /><span>円
 							</span>
 						</td>
@@ -84,6 +86,8 @@
 					<tr>
 						<td>
 							<span>購入個数 </span>
+						</td>
+						<td>
 							<select name = "count">
 								<option value="1" selected="selected">1</option>
 								<option value = " 2 " > 2</option>

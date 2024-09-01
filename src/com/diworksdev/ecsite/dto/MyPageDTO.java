@@ -10,7 +10,7 @@ public class MyPageDTO {
 	public String insert_date;
 
 	public String getItemName(){
-		return itemName ;
+		return itemName;
 	}
 
 	public void setItemName(String itemName) {

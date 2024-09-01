@@ -1,13 +1,15 @@
 package com.diworksdev.ecsite.action;
-import com.opensymphony.xwork2.ActionSupport;
-import org.apache.struts2.interceptor.SessionAware;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Map;
-import com.diworksdev.ecsite.dao.MyPageDAO ;
-import com.diworksdev.ecsite.dto.MyPageDTO;
 
-public class MyPageAction ActionSupport implements SessionAware {
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.diworksdev.ecsite.dao.MyPageDAO;
+import com.diworksdev.ecsite.dto.MyPageDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class MyPageAction extends ActionSupport implements SessionAware {
 	public Map <String,Object> session;
 	private MyPageDAO myPageDAO = new MyPageDAO();
 	private ArrayList <MyPageDTO>myPageList = new ArrayList<MyPageDTO>();
@@ -16,11 +18,11 @@ public class MyPageAction ActionSupport implements SessionAware {
 
 	public String execute () throws SQLException {
 		if (!session.containsKey ("login_user_id")) {
-			return ERROR ;
+			return ERROR;
 		}
 
 		if(deleteFlg == null) {
-			String item_transaction_id = session.get ("id").toString() ;
+			String item_transaction_id = session.get ("id").toString();
 			String user_master_id = session.get("login_user_id").toString();
 			myPageList = myPageDAO.getMyPageUserInfo(item_transaction_id,user_master_id);
 		} else if(deleteFlg.equals("1")) {

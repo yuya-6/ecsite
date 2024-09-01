@@ -10,16 +10,19 @@
 	<meta http-equiv= "imagetoolbar" content = "no"/>
 	<meta name="description" content=""/>
 	<meta name="keywords" content=""/>
-	<title>MyPage画 面 </title>
+	<title>MyPage画面 </title>
 	<style type="text/css">
 		/*========TAG LAYOUT========*/
 
 		body {
-			margin:0; paddi n g: 0 ;
-			line-height:1.6; letter-spacing:1px;
+			margin:0;
+			padding: 0 ;
+			line-height:1.6;
+			letter-spacing:1px;
 			font-family:Verdana, Helvetica, sans-serif;
 			font-size:12px;
-			colo r:#333; b ac kgrou nd :#fff ;
+			color:#333;
+			background :#fff ;
 		}
 
 		table {
@@ -82,11 +85,11 @@
 						<th>支払い方法 </th>
 						<th>購入日 </th>
 					</tr>
-					<s:iterator value="myPageList" >
+					<s:iterator value="myPageList">
 						<tr>
 							<td><s:property value="itemName"/></td>
-							<td><s:property value="totalPrice"/> <span> 円 </span> </td>
-							<td><s:property value="totalCount"/><span> 個</span></td>
+							<td><s:property value="totalPrice"/> <span>円 </span></td>
+							<td><s:property value="totalCount"/><span>個</span></td>
 							<td><s:property value="payment"/></td>
 							<td><s:property value="insert_date"/></td>
 						</tr>

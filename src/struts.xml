@@ -41,7 +41,7 @@
 		</action>
 
 		<!-- UserCreateCompleteAction -->
-		<action name = "UserCreateCompleteAction "
+		<action name = "UserCreateCompleteAction"
 		class="com.diworksdev.ecsite.action.UserCreateCompleteAction" method="execute">
 			<result name="success">userCreateComplete.jsp</result>
 		</action>
