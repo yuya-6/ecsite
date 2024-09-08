@@ -18,14 +18,17 @@ public class MyPageDAO {
 		ArrayList<MyPageDTO> myPageDTO = new ArrayList<MyPageDTO>();
 
 		//「LEFT JOIN」を用いて複数のテーブルを結合することでユーザ情報と履歴情報を紐付けて一括して取得
-		String sql = "SELECT ubit.id, iit.item_name, ubit.total_price, ubit.total_count,ubit.pay, ubit.insert_date"
-						+ "FROM user_buy_item_transaction ubit LEFT JOIN item_info_transaction iit"
-						+ "ON ubit.item_transaction_id = iit.id"
-						+ "WHERE ubit.item_transaction_id = ? AND ubit.user_master_id = ?"
+		String sql = "SELECT ubit.id, iit.item_name, ubit.total_price, ubit.total_count,ubit.pay, ubit.insert_date "
+						+ "FROM user_buy_item_transaction ubit LEFT JOIN item_info_transaction iit "
+						+ "ON ubit.item_transaction_id = iit.id "
+						+ "WHERE ubit.item_transaction_id = ? AND ubit.user_master_id = ? "
 						+ "ORDER BY insert_date DESC";
 
 		try {
 			//SQL文の？にActionから送られたtem_transaction_idとuser_master_idが入る
+			System.out.println(item_transaction_id);
+			System.out.println(user_master_id);
+
 			PreparedStatement preparedStatement = connection.prepareStatement(sql) ;
 			preparedStatement.setString (1,item_transaction_id);
 			preparedStatement.setString(2,user_master_id);
