@@ -9,6 +9,7 @@ import com.diworksdev.ecsite.dto.MyPageDTO;
 import com.diworksdev.ecsite.util.DBConnector;
 
 public class MyPageDAO {
+	//DBへの接続準備
 	private DBConnector dbConnector = new DBConnector();
 	private Connection connection = dbConnector.getConnection();
 
