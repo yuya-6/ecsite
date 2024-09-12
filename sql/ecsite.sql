@@ -8,7 +8,6 @@ use ecsite;
 
 drop table if exists login_user_transaction;
 
-//新規でテーブルを作成
 create table login_user_transaction(
 	id int not null primary key auto_increment,
 	login_id varchar(16) unique,
